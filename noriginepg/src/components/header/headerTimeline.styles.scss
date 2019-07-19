@@ -1,0 +1,25 @@
+.timeline-style {
+  display: inline-flex;
+  color: white;
+
+  .marker {
+    position: absolute;
+    width: 1.5px;
+    height: 100%;
+    background-color: gold;
+    z-index: 2;
+  }
+
+  .time-hour {
+    width: 600px;
+    padding: 20.5px 0 20.5px 0;
+    text-align: center;
+    border: solid 1px rgb(45, 46, 47);
+  }
+
+  @media all and (max-width: 320px) {
+    .time-hour {
+      height: 55px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.showMeta {
+    position: relative;
+    height: 120px;
+    color: white;
+    top: 11px;
+    left: 22px;
+    width: 100%;
+
+    .four {
+        text-align: center;
+    }
+
+    .historyLogo {
+        height: 18%;
+    }
+
+    .showTitle {
+        margin: 5px;
+    }
+
+    .meta {
+        .channelTitle {
+            margin: 5px;
+
+        }
+
+        .showsTime {
+            color: gray;
+            font-size: 0.7rem;
+        }
+    }
+
+    .showYear {
+        margin: 5px;
+    }
+
+    .genre {
+        font-size: 0.7rem;
+    }
+
+}

@@ -1,0 +1,70 @@
+.landingpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 77vh;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    .alignment {
+        position: relative;
+    }
+
+    .button {
+        position: fixed;
+        right: 111px;
+        bottom: 111px;
+        z-index: 2;
+    }
+}
+
+#error {
+    margin-left: 25%;
+    width: 50%;
+    color: white;
+    background-color: coral;
+}
+
+#loader {
+    position: absolute;
+    margin-left: 25%;
+    width: 50%;
+    color: white;
+    background-color: coral;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.header-date {
+    display: flex;
+    justify-content: center;
+}
+
+.header-timeline {
+    display: flex;
+    width: 100%;
+
+    .channels {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 7px 0 7px 0;
+    }
+}
+
+
+
+@media all and (max-width: 320px) {
+    .landingpage {
+        height: 140vh;
+        bottom: 10;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .landingpage {
+        min-height: 840px;
+        bottom: 10;
+    }
+}

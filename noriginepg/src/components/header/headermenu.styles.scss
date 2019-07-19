@@ -1,0 +1,29 @@
+.container {
+    height: 77px;
+    margin-bottom: 12px;
+
+    .header-menu {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        z-index: 5;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        height: 88px;
+        padding: 0.7rem 1.57rem 0.7rem 1.57rem;
+
+        .icon {
+            margin: auto 0;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        img {
+            height: 55px;
+        }
+    }
+}
