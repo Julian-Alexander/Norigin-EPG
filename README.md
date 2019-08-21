@@ -7,18 +7,11 @@
 - react-router-dom
 - semantic-ui-react
 - react-youtube
+- concurrently
 
 ## **Start**
 
-1.  In root folder, to start the Mock API run
-
-        yarn start
-
-    or if using npm
-
-        npm start
-
-2.  To install dependencies, go to the UI folder "noriginepg" and run
+1. To install dependencies, run
 
         yarn
 
@@ -26,7 +19,7 @@
 
         npm install
 
-3.  In the client folder, to start the UI run
+2.  To start Norigin EPG, run
 
         yarn start
 
