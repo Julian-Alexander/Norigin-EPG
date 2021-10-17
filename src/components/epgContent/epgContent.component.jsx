@@ -42,7 +42,11 @@ export const EPGContent = () => {
         <ProgrammeSchedule scroll={scroll} />
       </Sidebar.Pushable>
       {!scroll && (
-        <Button className="ui orange now-button" size="tiny" onClick={handleClickNow}>
+        <Button
+          className="ui orange now-button"
+          size="tiny"
+          onClick={handleClickNow}
+        >
           NOW
         </Button>
       )}

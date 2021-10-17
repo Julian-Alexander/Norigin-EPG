@@ -1,4 +1,3 @@
-import React from 'react';
 import { showTitle } from '../../channelShows/channelShows.component';
 import './showDataMeta.styles.scss';
 
