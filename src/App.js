@@ -1,22 +1,20 @@
-import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
-import HeaderMenu from './components/header/headermenu.component';
-import FullShow from './components/full/fullshow.component';
-import EPG from './components/full/epgfull.component';
+import { HeaderMenu } from './components/header/headerMenu.component';
+import { ShowView } from './components/showView/showView.component';
+import { EPGContent } from './components/epgContent/epgContent.component';
 
-function App() {
+export function App() {
   return (
     <Router>
       <HeaderMenu />
-      <Route path='/' exact strict component={EPG} />
-      <Route path='/program/:id' exact component={FullShowRoute} />
+      <Route path="/" exact strict component={EPGContent} />
+      <Route path="/program/:id" exact component={ShowViewRoute} />
     </Router>
   );
 }
-function FullShowRoute({ match }) {
-  return <FullShow id={match.params.id} />;
-}
 
-export default App;
+function ShowViewRoute({ match }) {
+  return <ShowView id={match.params.id} />;
+}

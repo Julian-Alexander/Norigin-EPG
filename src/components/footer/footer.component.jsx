@@ -1,9 +1,8 @@
-import React from 'react';
 import { Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './footer.styles.scss';
 
-const Footer = () => (
+export const Footer = () => (
   <div className='footer'>
     <Link to='/'>
       <Icon className='large home' alt='home' />
@@ -22,5 +21,3 @@ const Footer = () => (
     </Link>
   </div>
 );
-
-export default Footer;

@@ -9,7 +9,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "4.0.3",
     "react-youtube": "^7.9.0",
     "semantic-ui-react": "^0.87.3"
   },
@@ -18,7 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:mock-api": "./node_modules/.bin/osprey-mock-service -f ./node_modules/nm-mock-api/demo.raml -p 1337 --cors",
+    "start:mock-api": "./node_modules/.bin/osprey-mock-service -f ./node_modules/nm-mock-api/demo.raml -p 1333 --cors",
+    "update:epg": "node ./node_modules/nm-mock-api/scripts/updateEpg.js",
+    "update:programs": "node ./node_modules/nm-mock-api/scripts/updatePrograms.js",
     "server": "node ./node_modules/nm-mock-api/scripts/updateEpg.js && npm run start:mock-api",
     "start": "concurrently \"yarn run server\" \"yarn run start:ui\"",
     "heroku-postbuild": "YARN_PRODUCTION=false cd client && yarn && yarn run build"

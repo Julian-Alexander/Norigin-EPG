@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useAssets = asset => {
+export const useAssets = (asset) => {
   const [assets, setAssets] = useState([]);
   const [shows, setShows] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ status: false });
 
   useEffect(() => {
-    (async asset => {
+    (async (asset) => {
       try {
         const response = await axios.get(
           `${process.env.REACT_APP_URL}/${asset}`
@@ -21,7 +21,7 @@ const useAssets = asset => {
         setLoading(false);
         setError({
           status: true,
-          message: "Couldn't connect to Server. Please try again"
+          message: "Couldn't connect to Server. Please try again",
         });
       }
     })(asset);
@@ -29,5 +29,3 @@ const useAssets = asset => {
 
   return { assets, shows, error, loading };
 };
-
-export default useAssets;

@@ -1,0 +1,33 @@
+.show-data-header {
+  position: relative;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  font-size: 4rem;
+
+  .play-button {
+    position: relative;
+    top: 200px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .fader {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 66px;
+    background-image: linear-gradient(to bottom, black, transparent);
+
+    &.bottom {
+      top: initial;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, transparent, black);
+    }
+  }
+}

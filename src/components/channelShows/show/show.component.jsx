@@ -1,17 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import './guide.styles.scss';
+import './show.styles.scss';
 
-const Guide = props => {
+export const Show = (props) => {
   const { size, schedule } = props;
 
   const showNow = currentShow(schedule) ? 'shownow' : '';
 
   return (
-    <div id='guide-style' style={{ width: size }} className={showNow}>
-      <Link className='link' to={`/program/${schedule.id}`}>
-        <h1 className='program-title'>{schedule.title}</h1>
-        <span className='program-time'>{translateDate(schedule)}</span>
+    <div id="show-container" style={{ width: size }} className={showNow}>
+      <Link className="link" to={`/program/${schedule.id}`}>
+        <h1 className="show-title">{schedule.title}</h1>
+        <span className="show-time">{translateDate(schedule)}</span>
       </Link>
     </div>
   );
@@ -43,5 +42,3 @@ function currentShow(schedule) {
       end.getHours() * 60 + end.getMinutes()
   );
 }
-
-export default Guide;

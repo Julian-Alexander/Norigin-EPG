@@ -1,0 +1,45 @@
+#show-data-container {
+  background-color: black;
+  width: 100%;
+  align-content: center;
+
+  .show-data-meta {
+    height: 222px;
+  }
+}
+
+.show-data-content {
+  padding: 22px 0 100px 0;
+  color: white;
+  background-color: black;
+  width: 100%;
+
+  .show-data-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      height: auto;
+      width: 70%;
+      margin: 11px auto auto auto;
+    }
+  }
+
+  .show-data-season-episodes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+  
+  .season-title{
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+
+  .episode-title{
+    margin-bottom: 10px;
+  }
+  }
+}

@@ -1,0 +1,54 @@
+#channel-logo {
+  height: 50px;
+  margin: auto;
+}
+
+#sidebar-pushable {
+  height: 84vh;
+}
+
+#star {
+  display: flex;
+  justify-content: center;
+  height: 85px;
+}
+
+#sidebar-style {
+  box-shadow: 1px 0 11px 1px black;
+  overflow: hidden !important;
+  padding-top: 0;
+  min-height: 886.5px;
+  width: 6rem;
+  padding-bottom: 3rem;
+
+  #opaque {
+    height: 65px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .menu-item {
+    min-height: 80px;
+  }
+}
+
+.pusher {
+  max-height: 770px;
+  padding-top: 0;
+}
+
+.now-button {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+}
+
+@media all and (min-width: 420px) {
+  #sidebar-pushable {
+    height: 86vh;
+  }
+  .now-button {
+    position: fixed;
+    right: 50px;
+    bottom: 200px;
+  }
+}

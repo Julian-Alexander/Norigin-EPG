@@ -1,18 +1,17 @@
-import React from 'react';
-import useAssets from '../useAssets/useassets.component';
-import Guide from '../guide/guide.component';
-import './channelList.styles.scss';
+import { useAssets } from '../useAssets/useAssets.component';
+import { Show } from './show/show.component';
+import './channelShows.styles.scss';
 
-const ChannelList = () => {
+export const ChannelShows = () => {
   const { assets } = useAssets('epg');
 
   return (
-    <div id='channels-container'>
-      {assets.map(asset => {
+    <div id="channel-shows-container">
+      {assets.map((asset) => {
         return (
-          <ul key={asset.id} className='channel-list'>
+          <ul key={asset.id} className="channel-shows">
             {asset.schedules.map((schedule, index) => (
-              <Guide
+              <Show
                 key={schedule.id + index}
                 size={programSize(schedule)}
                 schedule={schedule}
@@ -40,7 +39,7 @@ const months = [
   'September',
   'October',
   'November',
-  'December'
+  'December',
 ];
 
 function programSize(schedule) {
@@ -54,16 +53,17 @@ function programSize(schedule) {
   return Math.abs(size * minuteSize);
 }
 
-function getDatePosition(date) {
+export function getDatePosition(date) {
   return date.getHours() * hourSize + date.getMinutes() * minuteSize;
 }
+
 function showTime(date) {
   return `${('0' + date.getHours()).slice(-2)}:${(
     '0' + date.getMinutes()
   ).slice(-2)}`;
 }
 
-function showTitle(start, end) {
+export function showTitle(start, end) {
   const startShow = new Date(start);
   const endShow = new Date(end);
 
@@ -71,6 +71,3 @@ function showTitle(start, end) {
     startShow
   )} - ${showTime(endShow)}`;
 }
-
-export default ChannelList;
-export { getDatePosition, showTitle };

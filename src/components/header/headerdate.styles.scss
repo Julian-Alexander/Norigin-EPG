@@ -1,6 +1,7 @@
 .time-date {
   display: flex;
-  padding: 12.21px;
+  align-content: center;
+  height: 85px;
   border: solid 0.5px rgb(45, 46, 47);
   overflow: hidden;
 }
@@ -16,32 +17,10 @@
   .week-day {
     font-size: 1.5rem;
     font-weight: 300;
-
   }
 
   .month-day {
     font-size: 0.8rem;
     font-weight: 100;
-  }
-}
-
-@media all and (max-width: 320px) {
-  .time-date {
-    height: 65px;
-  }
-
-  #header-date {
-    margin: auto;
-    padding: 3px;
-
-    .week-day {
-      font-size: 1.5rem;
-      font-weight: 300;
-    }
-
-    .month-day {
-      font-size: 0.8rem;
-      font-weight: 100;
-    }
   }
 }

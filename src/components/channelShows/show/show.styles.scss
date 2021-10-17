@@ -1,0 +1,56 @@
+#show-container {
+  color: white;
+  word-wrap: break-word;
+  border: solid 0.5px rgb(45, 46, 47);
+  text-align: left;
+  height: 3rem;
+  min-height: 80px;
+  padding: 17px;
+
+  .show-title {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+
+    &:hover {
+      color: orange;
+    }
+  }
+
+  .show-time {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 100;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  span {
+    color: grayscale($color: #daaaaa);
+  }
+}
+
+.shownow {
+  background-color: gray;
+}
+
+@media all and (max-width: 320px) {
+  #show-container {
+
+    padding: 11px;
+
+    .show-title {
+      font-size: 0.7em;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .show-time {
+      font-size: 0.7rem;
+      margin: 0;
+      font-weight: 100;
+    }
+  }
+}
